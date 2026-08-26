@@ -3566,9 +3566,10 @@ local INJECTED_MAPPINGS = [[
       </ActionMapping>
     </ActionMappings>]]
 
-local TMP_SAVE    = "/tmp/akm_save.xrns"
-local TMP_UNZIP   = "/tmp/akm_unzip"
-local TMP_PATCHED = "/tmp/akm_patched.xrns"
+local TMP_DIR      = os.getenv("TEMP") or os.getenv("TMP") or "/tmp"
+local TMP_SAVE    = TMP_DIR.."/akm_save.xrns"
+local TMP_UNZIP   = TMP_DIR.."/akm_unzip"
+local TMP_PATCHED = TMP_DIR.."/akm_patched.xrns"
 local INJECTED_MARKER = "AKM_INJECTED"
 
 local _app_ready = false
